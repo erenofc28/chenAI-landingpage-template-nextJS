@@ -19,9 +19,10 @@ export default function FeaturesWhite() {
               Medium length section heading goes here
             </h2>
             <p className="text-black text-lg leading-[150%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-              ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
             </p>
           </div>
         </div>
@@ -50,9 +51,9 @@ export default function FeaturesWhite() {
               Medium length section heading goes here
             </h3>
             <p className="text-black text-base leading-[150%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-              ornare, eros dolor interdum nulla.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla.
             </p>
           </div>
 
@@ -78,9 +79,9 @@ export default function FeaturesWhite() {
               Medium length section heading goes here
             </h3>
             <p className="text-black text-base leading-[150%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-              ornare, eros dolor interdum nulla.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla.
             </p>
           </div>
 
@@ -106,9 +107,9 @@ export default function FeaturesWhite() {
               Medium length section heading goes here
             </h3>
             <p className="text-black text-base leading-[150%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-              ornare, eros dolor interdum nulla.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla.
             </p>
           </div>
         </div>

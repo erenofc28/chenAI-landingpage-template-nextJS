@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
-      const [openMenu, setOpenMenu] = useState(null);
-const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
@@ -15,8 +15,6 @@ const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <header className="w-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.12)] sticky top-0 z-50">
       <div className="h-18 px-4 md:px-16 flex justify-between items-center">
-
-  
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <div className="w-[84px] h-9 flex justify-center items-center">
@@ -62,98 +60,117 @@ const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-16">
-<nav className="flex items-center gap-8">
-  {/* Solutions */}
-  <div className="relative">
-    <button
-      onClick={() => toggleMenu("solutions")}
-      className="flex items-center gap-1 text-black hover:text-gray-600"
-    >
-      Solutions
-      <ChevronDown className="w-6 h-6" />
-    </button>
+          <nav className="flex items-center gap-6">
+            {/* Solutions */}
+            <div className="relative text-[15px]">
+              <button
+                onClick={() => toggleMenu("solutions")}
+                className="flex items-center gap-1 text-black hover:text-gray-600"
+              >
+                Solutions
+                <ChevronDown className="w-6 h-6" />
+              </button>
 
-    {openMenu === "solutions" && (
-      <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
-        <Link href="/solutions/one" className="block px-4 py-2 hover:bg-gray-100">
-          Solution One
-        </Link>
-        <Link href="/solutions/two" className="block px-4 py-2 hover:bg-gray-100">
-          Solution Two
-        </Link>
-      </div>
-    )}
-  </div>
+              {openMenu === "solutions" && (
+                <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    href="/solutions/one"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Solution One
+                  </Link>
+                  <Link
+                    href="/solutions/two"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Solution Two
+                  </Link>
+                </div>
+              )}
+            </div>
 
-  {/* Services */}
-  <div className="relative">
-    <button
-      onClick={() => toggleMenu("services")}
-      className="flex items-center gap-1 text-black hover:text-gray-600"
-    >
-      Services
-      <ChevronDown className="w-6 h-6" />
-    </button>
+            {/* Services */}
+            <div className="relative text-[15px]">
+              <button
+                onClick={() => toggleMenu("services")}
+                className="flex items-center gap-1 text-black hover:text-gray-600"
+              >
+                Services
+                <ChevronDown className="w-6 h-6" />
+              </button>
 
-    {openMenu === "services" && (
-      <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
-        <Link href="/services/design" className="block px-4 py-2 hover:bg-gray-100">
-          Design
-        </Link>
-        <Link href="/services/dev" className="block px-4 py-2 hover:bg-gray-100">
-          Development
-        </Link>
-      </div>
-    )}
-  </div>
+              {openMenu === "services" && (
+                <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    href="/services/design"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Design
+                  </Link>
+                  <Link
+                    href="/services/dev"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Development
+                  </Link>
+                </div>
+              )}
+            </div>
 
-  {/* Affiliate */}
-  <div className="relative">
-    <button
-      onClick={() => toggleMenu("affiliate")}
-      className="flex items-center gap-1 text-black hover:text-gray-600"
-    >
-      Affiliate
-      <ChevronDown className="w-6 h-6" />
-    </button>
+            {/* Affiliate */}
+            <div className="relative text-[15px]">
+              <button
+                onClick={() => toggleMenu("affiliate")}
+                className="flex items-center gap-1 text-black hover:text-gray-600"
+              >
+                Affiliate
+                <ChevronDown className="w-6 h-6" />
+              </button>
 
-    {openMenu === "affiliate" && (
-      <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
-        <Link href="/affiliate/join" className="block px-4 py-2 hover:bg-gray-100">
-          Join
-        </Link>
-        <Link href="/affiliate/dashboard" className="block px-4 py-2 hover:bg-gray-100">
-          Dashboard
-        </Link>
-      </div>
-    )}
-  </div>
+              {openMenu === "affiliate" && (
+                <div className="absolute top-full mt-2 w-44 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    href="/affiliate/join"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Join
+                  </Link>
+                  <Link
+                    href="/affiliate/dashboard"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Dashboard
+                  </Link>
+                </div>
+              )}
+            </div>
 
-  {/* About */}
-  <Link href="/about" className="text-black hover:text-gray-600">
-    About Us
-  </Link>
-</nav>
+            {/* About */}
+            <Link
+              href="/about"
+              className="text-black hover:text-gray-600 text-[15px]"
+            >
+              About Us
+            </Link>
 
+            {/* Action Buttons */}
+            <div className="flex items-center gap-4 ">
+              <button className=" text-[15px] px-4 py-2 rounded-lg border border-black">
+                Button
+              </button>
 
-          {/* Action Buttons */}
-          <div className="flex items-center gap-4">
-            <button className="px-5 py-2 rounded-lg border border-black">
-              button
-            </button>
-
-            <button className="px-5 py-2 rounded-lg bg-blue-500 text-white">
-              button
-            </button>
-          </div>
+              <button className=" text-[15px] px-4 py-2 rounded-lg bg-[#3C80D5] text-white">
+                Button
+              </button>
+            </div>
+          </nav>
         </div>
 
         {/* Mobile Menu Button */}
-<button
-  onClick={() => setIsSidebarOpen(true)}
-  className="lg:hidden p-2 text-black"
->
-
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          className="lg:hidden p-2 text-black"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -168,113 +185,109 @@ const [isSidebarOpen, setIsSidebarOpen] = useState(false);
             />
           </svg>
         </button>
-
       </div>
 
       {/* Mobile Sidebar Overlay */}
-{isSidebarOpen && (
-  <div
-    onClick={() => setIsSidebarOpen(false)}
-    className="fixed inset-0 bg-black/40 z-40"
-  />
-)}
+      {isSidebarOpen && (
+        <div
+          onClick={() => setIsSidebarOpen(false)}
+          className="fixed inset-0 bg-black/40 z-40"
+        />
+      )}
 
-{/* Mobile Sidebar */}
-<div
-  className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 transform transition-transform duration-300
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 transform transition-transform duration-300
     ${isSidebarOpen ? "translate-x-0" : "translate-x-full"}`}
->
-  <div className="p-6 flex flex-col gap-6">
-
-    {/* Close Button */}
-    <button
-      onClick={() => setIsSidebarOpen(false)}
-      className="self-end text-2xl"
-    >
-      ✕
-    </button>
-
-    {/* Mobile Nav */}
-    <nav className="flex flex-col gap-4 text-black">
-
-      {/* Solutions */}
-      <button
-        onClick={() => toggleMenu("solutions")}
-        className="flex justify-between items-center"
       >
-        Solutions
-        <ChevronDown
-          className={`transition-transform ${
-            openMenu === "solutions" ? "rotate-180" : ""
-          }`}
-        />
-      </button>
+        <div className="p-6 flex flex-col gap-6">
+          {/* Close Button */}
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="self-end text-2xl"
+          >
+            ✕
+          </button>
 
-      {openMenu === "solutions" && (
-        <div className="pl-4 flex flex-col gap-2 text-gray-600">
-          <Link href="/solutions/one">Solution One</Link>
-          <Link href="/solutions/two">Solution Two</Link>
+          {/* Mobile Nav */}
+          <nav className="flex flex-col gap-4 text-black">
+            {/* Solutions */}
+            <button
+              onClick={() => toggleMenu("solutions")}
+              className="flex justify-between items-center"
+            >
+              Solutions
+              <ChevronDown
+                className={`transition-transform ${
+                  openMenu === "solutions" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {openMenu === "solutions" && (
+              <div className="pl-4 flex flex-col gap-2 text-gray-600">
+                <Link href="/solutions/one">Solution One</Link>
+                <Link href="/solutions/two">Solution Two</Link>
+              </div>
+            )}
+
+            {/* Services */}
+            <button
+              onClick={() => toggleMenu("services")}
+              className="flex justify-between items-center"
+            >
+              Services
+              <ChevronDown
+                className={`transition-transform ${
+                  openMenu === "services" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {openMenu === "services" && (
+              <div className="pl-4 flex flex-col gap-2 text-gray-600">
+                <Link href="/services/design">Design</Link>
+                <Link href="/services/dev">Development</Link>
+              </div>
+            )}
+
+            {/* Affiliate */}
+            <button
+              onClick={() => toggleMenu("affiliate")}
+              className="flex justify-between items-center"
+            >
+              Affiliate
+              <ChevronDown
+                className={`transition-transform ${
+                  openMenu === "affiliate" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {openMenu === "affiliate" && (
+              <div className="pl-4 flex flex-col gap-2 text-gray-600">
+                <Link href="/affiliate/join">Join</Link>
+                <Link href="/affiliate/dashboard">Dashboard</Link>
+              </div>
+            )}
+
+            {/* About */}
+            <Link href="/about" className="mt-2">
+              About Us
+            </Link>
+          </nav>
+
+          {/* Mobile Buttons */}
+          <div className="mt-6 flex flex-col gap-3">
+            <button className="w-full py-2 border border-black rounded-lg">
+              button
+            </button>
+            <button className="w-full py-2 bg-blue-500 text-white rounded-lg">
+              button
+            </button>
+          </div>
         </div>
-      )}
-
-      {/* Services */}
-      <button
-        onClick={() => toggleMenu("services")}
-        className="flex justify-between items-center"
-      >
-        Services
-        <ChevronDown
-          className={`transition-transform ${
-            openMenu === "services" ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-
-      {openMenu === "services" && (
-        <div className="pl-4 flex flex-col gap-2 text-gray-600">
-          <Link href="/services/design">Design</Link>
-          <Link href="/services/dev">Development</Link>
-        </div>
-      )}
-
-      {/* Affiliate */}
-      <button
-        onClick={() => toggleMenu("affiliate")}
-        className="flex justify-between items-center"
-      >
-        Affiliate
-        <ChevronDown
-          className={`transition-transform ${
-            openMenu === "affiliate" ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-
-      {openMenu === "affiliate" && (
-        <div className="pl-4 flex flex-col gap-2 text-gray-600">
-          <Link href="/affiliate/join">Join</Link>
-          <Link href="/affiliate/dashboard">Dashboard</Link>
-        </div>
-      )}
-
-      {/* About */}
-      <Link href="/about" className="mt-2">
-        About Us
-      </Link>
-    </nav>
-
-    {/* Mobile Buttons */}
-    <div className="mt-6 flex flex-col gap-3">
-      <button className="w-full py-2 border border-black rounded-lg">
-        button
-      </button>
-      <button className="w-full py-2 bg-blue-500 text-white rounded-lg">
-        button
-      </button>
-    </div>
-  </div>
-</div>
-
+      </div>
     </header>
   );
 }

@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Features() {
   return (
-    <section className="w-full bg-blue-500 py-20 md:py-28 px-4 md:px-16">
+    <section className="w-full bg-[#3C80D5] py-20 md:py-28 px-4 md:px-16">
       <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-12 md:gap-20">
         {/* Section Title */}
         <div className="max-w-[768px] w-full flex flex-col items-center gap-4">
@@ -21,9 +21,10 @@ export default function Features() {
               Medium length section heading goes here
             </h2>
             <p className="text-white text-center text-lg leading-[150%]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-              ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
             </p>
           </div>
         </div>
@@ -50,13 +51,13 @@ export default function Features() {
 
             {/* Content */}
             <div className="flex flex-col items-center gap-6 w-full">
-              <h3 className="text-white text-center font-bold text-2xl md:text-[32px] leading-[130%]">
+              <h3 className="text-white text-center font-bold text-2xl md:text-[30px] leading-[130%]">
                 Medium length section heading goes here
               </h3>
               <p className="text-white text-center text-base leading-[150%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla.
               </p>
             </div>
           </div>
@@ -81,13 +82,13 @@ export default function Features() {
 
             {/* Content */}
             <div className="flex flex-col items-center gap-6 w-full">
-              <h3 className="text-white text-center font-bold text-2xl md:text-[32px] leading-[130%]">
+              <h3 className="text-white text-center font-bold text-2xl md:text-[30px] leading-[130%]">
                 Medium length section heading goes here
               </h3>
               <p className="text-white text-center text-base leading-[150%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla.
               </p>
             </div>
           </div>
@@ -112,13 +113,13 @@ export default function Features() {
 
             {/* Content */}
             <div className="flex flex-col items-center gap-6 w-full">
-              <h3 className="text-white text-center font-bold text-2xl md:text-[32px] leading-[130%]">
+              <h3 className="text-white text-center font-bold text-2xl md:text-[30px] leading-[130%]">
                 Medium length section heading goes here
               </h3>
               <p className="text-white text-center text-base leading-[150%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla.
               </p>
             </div>
           </div>

@@ -1,15 +1,13 @@
-
 export default function Logos() {
   return (
     <section className="w-full bg-white py-16 md:py-20 px-4 md:px-16">
       <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
-{/* Heading */}
-<div className="w-full md:w-[320px] flex justify-center md:justify-start">
-  <h3 className="text-black font-bold text-lg leading-[150%] text-center md:text-left">
-    Used by the world's leading companies
-  </h3>
-</div>
-
+        {/* Heading */}
+        <div className="w-full md:w-[320px] flex justify-center md:justify-start">
+          <h3 className="text-black font-bold text-[17px] leading-[150%] text-center md:text-left">
+            Used by the world's leading companies
+          </h3>
+        </div>
 
         {/* Logos */}
         <div className="flex-1 flex justify-end items-center flex-wrap gap-4 md:gap-8">
