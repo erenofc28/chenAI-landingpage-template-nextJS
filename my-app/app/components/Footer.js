@@ -1,22 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Youtube, X } from "lucide-react";
-import { ChevronDown } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  X,
+  ChevronDown,
+} from "lucide-react";
 import { useState } from "react";
 
 export default function Footer() {
   const [open, setOpen] = useState(null);
 
   return (
-    <footer className="bg-[#1c1c1c] text-white px-6 md:px-20 pt-20 pb-10">
+    <footer className="bg-[#1c1c1c] text-white px-4 sm:px-6 xl:px-20 pt-16 pb-10">
       <div className="max-w-[1400px] mx-auto">
         {/* TOP GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-16">
-          {/* LEFT: LOGO + NEWSLETTER */}
-          <div className="space-y-6 max-w-xl mx-auto md:mx-0 text-center md:text-left">
-            {/* Logo */}
-            <Link href="/" className="flex justify-center md:justify-start">
+        <div className="grid grid-cols-1 xl:grid-cols-[2fr_1fr_1fr_1fr] gap-12 xl:gap-16">
+          {/* LEFT: NEWSLETTER */}
+          <div className="space-y-6 max-w-xl mx-auto xl:mx-0 text-center xl:text-left">
+                                    <Link href="/" className="flex justify-center xl:justify-start">
               <div className="w-[84px] h-9 flex justify-center items-center">
                 <svg
                   width="70"
@@ -57,51 +62,46 @@ export default function Footer() {
                 </svg>
               </div>
             </Link>
-
             <p className="text-white/70">
               Join our newsletter to stay up to date on features and releases.
             </p>
 
-            {/* Email */}
-            <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3">
+            {/* EMAIL */}
+            <div className="grid grid-cols-1 xl:grid-cols-[minmax(260px,1fr)_auto] gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full bg-transparent border border-white/40 px-4 py-3 rounded-md text-sm placeholder:text-white/50 focus:outline-none"
+                className="w-full min-w-[260px] bg-transparent border border-white/40 px-4 py-3 rounded-md text-sm placeholder:text-white/50 focus:outline-none"
               />
-              <button className="border border-white/60 px-6 py-3 rounded-md hover:bg-white hover:text-black transition whitespace-nowrap">
+              <button className="border border-white/60 px-6 py-3 rounded-md hover:bg-white hover:text-black transition">
                 Subscribe
               </button>
             </div>
 
-            <p className="text-xs text-white/60 leading-relaxed">
-              By subscribing you agree to with our{" "}
-              <span className="underline cursor-pointer">Privacy Policy</span>{" "}
-              and provide consent to receive updates from our company.
+            <p className="text-xs text-white/60">
+              By subscribing you agree to our{" "}
+              <span className="underline cursor-pointer">Privacy Policy</span>.
             </p>
           </div>
 
           {/* COLUMN ONE */}
-          <div className="border-t border-white/20 pt-4 md:border-none md:pt-0">
+          <div className="border-t border-white/20 pt-4 xl:border-none xl:pt-0">
             <button
               onClick={() => setOpen(open === "one" ? null : "one")}
-              className="w-full relative text-left md:pointer-events-none"
+              className="w-full relative text-center xl:text-left xl:pointer-events-none"
             >
-              <h3 className="font-semibold mb-2 md:mb-4">Column One</h3>
-
-              {/* Chevron */}
+              <h3 className="font-semibold mb-2 xl:mb-4">Column One</h3>
               <ChevronDown
-                className={`absolute right-0 top-1 md:hidden transition-transform duration-300 ${
+                className={`absolute right-0 top-1 xl:hidden transition-transform duration-300 ${
                   open === "one" ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             <ul
-              className={`space-y-3 text-white/70 mt-2
-      ${open === "one" ? "block" : "hidden"}
-      md:block
-    `}
+              className={`space-y-3 text-white/70 mt-2 text-center xl:text-left
+                ${open === "one" ? "block" : "hidden"}
+                xl:block`}
             >
               <li>Link One</li>
               <li>Link Two</li>
@@ -112,26 +112,23 @@ export default function Footer() {
           </div>
 
           {/* COLUMN TWO */}
-          <div className="border-t border-white/20 pt-4 md:border-none md:pt-0">
+          <div className="border-t border-white/20 pt-4 xl:border-none xl:pt-0">
             <button
               onClick={() => setOpen(open === "two" ? null : "two")}
-              className="w-full relative text-left md:pointer-events-none"
+              className="w-full relative text-center xl:text-left xl:pointer-events-none"
             >
-              <h3 className="font-semibold mb-2 md:mb-4">Column Two</h3>
-
-              {/* Chevron */}
+              <h3 className="font-semibold mb-2 xl:mb-4">Column Two</h3>
               <ChevronDown
-                className={`absolute right-0 top-1 md:hidden transition-transform duration-300 ${
+                className={`absolute right-0 top-1 xl:hidden transition-transform duration-300 ${
                   open === "two" ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             <ul
-              className={`space-y-3 text-white/70 mt-2
-      ${open === "two" ? "block" : "hidden"}
-      md:block
-    `}
+              className={`space-y-3 text-white/70 mt-2 text-center xl:text-left
+                ${open === "two" ? "block" : "hidden"}
+                xl:block`}
             >
               <li>Link Six</li>
               <li>Link Seven</li>
@@ -142,60 +139,46 @@ export default function Footer() {
           </div>
 
           {/* FOLLOW US */}
-          {/* FOLLOW US */}
-          <div className="border-t border-white/20 pt-4 md:border-none md:pt-0 text-center md:text-left">
+          <div className="border-t border-white/20 pt-4 xl:border-none xl:pt-0 text-center xl:text-left">
             <h3 className="font-semibold mb-4">Follow Us</h3>
 
-            {/* Mobile: Icons only */}
-            <div className="flex justify-center md:justify-start gap-6 md:hidden text-white/70">
-              <Facebook
-                size={20}
-                className="cursor-pointer hover:text-white transition"
-              />
-              <Instagram
-                size={20}
-                className="cursor-pointer hover:text-white transition"
-              />
-              <X
-                size={20}
-                className="cursor-pointer hover:text-white transition"
-              />
-              <Linkedin
-                size={20}
-                className="cursor-pointer hover:text-white transition"
-              />
-              <Youtube
-                size={20}
-                className="cursor-pointer hover:text-white transition"
-              />
+            {/* Mobile / Tablet */}
+            <div className="flex justify-center gap-6 xl:hidden text-white/70">
+              {[Facebook, Instagram, X, Linkedin, Youtube].map((Icon, i) => (
+                <Icon
+                  key={i}
+                  size={20}
+                  className="cursor-pointer hover:text-white transition"
+                />
+              ))}
             </div>
 
-            {/* Desktop: Icons + text */}
-            <ul className="hidden md:flex flex-col space-y-4 text-white/70">
-              <li className="flex items-center gap-3 hover:text-white transition cursor-pointer">
+            {/* Desktop */}
+            <ul className="hidden xl:flex flex-col space-y-4 text-white/70">
+              <li className="flex items-center gap-3 hover:text-white cursor-pointer">
                 <Facebook size={18} /> Facebook
               </li>
-              <li className="flex items-center gap-3 hover:text-white transition cursor-pointer">
+              <li className="flex items-center gap-3 hover:text-white cursor-pointer">
                 <Instagram size={18} /> Instagram
               </li>
-              <li className="flex items-center gap-3 hover:text-white transition cursor-pointer">
+              <li className="flex items-center gap-3 hover:text-white cursor-pointer">
                 <X size={18} /> X
               </li>
-              <li className="flex items-center gap-3 hover:text-white transition cursor-pointer">
+              <li className="flex items-center gap-3 hover:text-white cursor-pointer">
                 <Linkedin size={18} /> LinkedIn
               </li>
-              <li className="flex items-center gap-3 hover:text-white transition cursor-pointer">
+              <li className="flex items-center gap-3 hover:text-white cursor-pointer">
                 <Youtube size={18} /> YouTube
               </li>
             </ul>
           </div>
         </div>
 
-        {/* DIVIDER */}
-        <div className="border-t border-white/30 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70 text-center md:text-left">
+        {/* BOTTOM */}
+        <div className="border-t border-white/30 mt-14 pt-6 flex flex-col xl:flex-row justify-between items-center gap-4 text-sm text-white/70 text-center xl:text-left">
           <p>© 2024 Relume. All rights reserved.</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 underline">
+          <div className="flex flex-wrap justify-center xl:justify-end gap-4 underline">
             <span>Privacy Policy</span>
             <span>Terms of Service</span>
             <span>Cookies Settings</span>
